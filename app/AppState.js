@@ -14,12 +14,27 @@ class AppState extends EventEmitter {
   houses = [
     new House({
       price: 400000,
+      address: "123 Madeup St.",
+      city: "Boise",
+      state: "ID",
       bed: 3,
       bath: 3,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx6Vu_WdJ1ixWBDMw01hMh0IjwY4-A4C9Dew&usqp=CAU",
       squareFt: 2500,
       garage: "yes",
-      yard: "yas",
+      yard: "yes",
+    }),
+    new House({
+      price: 450000,
+      address: "124 Madeup St.",
+      city: "Boise",
+      state: "ID",
+      bed: 4,
+      bath: 1,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIr_gA0lmSTCpuimRX_14aK7mD1VGeLTuw_g&usqp=CAU",
+      squareFt: 2600,
+      garage: "no",
+      yard: "no",
     }),
   ];
 
