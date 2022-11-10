@@ -1,38 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://bcw.blob.core.windows.net/public/img/9977764104160066"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+      integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>ltFall22_gregsList</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
-    integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/style/main.css">
-  <link rel="stylesheet" href="assets/style/style.css">
-  <title>ltFall22_gregsList</title>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">ltFall22_gregsList</span>
-      </a>
-      <button class="btn btn-primary me-3" onclick="app.carsController.showCars()">Cars</button>
-      <button class="btn btn-primary">Homes</button>
-    </nav>
-  </header>
-  <main>
-    <div class="container-fluid">
-      <div class="row my-3">
-        <div class="col-6 m-auto" id="listing-form">
-          <!-- NOTE form for our current listing type -->
-          <!-- <form onsubmit="app.carsController.createCar()">
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-dark navbar-expand bg-dark text-light no-select"
+      >
+        <a class="navbar-brand ms-3" href="#">
+          <img
+            src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png"
+            height="45"
+            alt=""
+            loading="lazy"
+          />
+          <span class="ms-2">ltFall22_gregsList</span>
+        </a>
+        <button
+          class="btn btn-primary me-3"
+          onclick="app.carsController.showCars()"
+        >
+          Cars
+        </button>
+        <button class="btn btn-primary">Homes</button>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row my-3">
+          <div class="col-8 m-auto" id="listing-form">
+            <!-- STUB house form -->
+            <form class="row g-3 bg-light p-3 m-2">
+              <div class="col-md-6 col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  name="address"
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputImg" class="form-label">Image</label>
+                <input
+                  name="img"
+                  type="text"
+                  class="form-control"
+                  id="inputImg"
+                  placeholder="url"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input
+                  name="city"
+                  type="text"
+                  class="form-control"
+                  id="inputCity"
+                />
+              </div>
+              <div class="col-md-4">
+                <label name="state" for="inputState" class="form-label"
+                  >State</label
+                >
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>AK</option>
+                  <option>AL</option>
+                  <option>AR</option>
+                  <option>AZ</option>
+                  <option>CA</option>
+                  <option>CO</option>
+                  <option>CT</option>
+                  <option>DC</option>
+                  <option>DE</option>
+                  <option>FL</option>
+                  <option>GA</option>
+                  <option>HI</option>
+                  <option>IA</option>
+                  <option>ID</option>
+                  <option>IL</option>
+                  <option>IN</option>
+                  <option>KS</option>
+                  <option>KY</option>
+                  <option>LA</option>
+                  <option>MA</option>
+                  <option>MD</option>
+                  <option>ME</option>
+                  <option>MI</option>
+                  <option>MN</option>
+                  <option>MO</option>
+                  <option>MS</option>
+                  <option>MT</option>
+                  <option>NC</option>
+                  <option>ND</option>
+                  <option>NE</option>
+                  <option>NH</option>
+                  <option>NJ</option>
+                  <option>NM</option>
+                  <option>NV</option>
+                  <option>NY</option>
+                  <option>OH</option>
+                  <option>OK</option>
+                  <option>OR</option>
+                  <option>PA</option>
+                  <option>RI</option>
+                  <option>SC</option>
+                  <option>SD</option>
+                  <option>TN</option>
+                  <option>TX</option>
+                  <option>UT</option>
+                  <option>VA</option>
+                  <option>VT</option>
+                  <option>MA</option>
+                  <option>WI</option>
+                  <option>WV</option>
+                  <option>WY</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label name="beds" for="inputState" class="form-label"
+                  >Beds</label
+                >
+                <select id="bedNum" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label name="baths" for="number" class="form-label"
+                  >Baths</label
+                >
+                <select id="bathNum" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label name="garage" for="text" class="form-label"
+                  >Garage</label
+                >
+                <select id="garage" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label name="yard" for="text" class="form-label">Yard</label>
+                <select id="yard" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Amount (to the nearest dollar)"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div>
+              <button class="btn btn-primary">Post</button>
+            </form>
+            <!-- NOTE form for our current listing type -->
+            <!-- <form onsubmit="app.carsController.createCar()">
             <div class="form-floating mb-3">
               <input required type="text" minlength="3" class="form-control" id="car-make" placeholder="Car Make"
                 name="make">
@@ -70,12 +245,12 @@
             <button type="submit" class="btn btn-success mt-3">Submit</button>
             <button type="reset" class="btn btn-outline-danger mt-3">Reset</button>
           </form> -->
+          </div>
         </div>
-      </div>
-      <div class="row" id="listings">
-        <!-- FIXME Step 3: Build out a template for our model -->
-        <!-- STUB Car template -->
-        <!-- <div class="col-4 p-4">
+        <div class="row" id="listings">
+          <!-- FIXME Step 3: Build out a template for our model -->
+          <!-- STUB Car template -->
+          <!-- <div class="col-4 p-4">
           <div class="card">
             <img src="https://www.autotrader.com/wp-content/uploads/2020/02/vueredline-1.jpg" class="card-img-top"
               alt="vue">
@@ -90,21 +265,27 @@
             </div>
           </div>
         </div> -->
+        </div>
       </div>
-    </div>
-  </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by CodeWorks</small></p>
-    </div>
-  </footer>
+    </main>
+    <footer class="bg-dark text-light">
+      <div class="text-center no-select">
+        <p><small>Made with 💖 by CodeWorks</small></p>
+      </div>
+    </footer>
 
-  <!-- SECTION here is our modal, he is hidden so he goes below the footer -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" id="details">
-        <!-- STUB car details template -->
-        <!-- <div class="modal-header">
+    <!-- SECTION here is our modal, he is hidden so he goes below the footer -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content" id="details">
+          <!-- STUB car details template -->
+          <!-- <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Honda Civic</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -121,16 +302,20 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div> -->
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
-    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
-  <script src="app/App.js" type="module"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+      integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app/App.js" type="module"></script>
+  </body>
 </html>

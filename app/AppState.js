@@ -43,6 +43,7 @@ class AppState extends EventEmitter {
   cars = loadState("cars", [Car]);
   /** @type {import('./Models/Car').Car|null} */
   activeCar = null;
+  activeHouse = null;
 }
 
 export const appState = new Proxy(new AppState(), {
